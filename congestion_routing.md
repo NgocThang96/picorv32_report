@@ -52,13 +52,20 @@ Clock tree phân bố không đều
 }   
 
 ### PHÂN TÍCH  
-### a. DRC Errors  
+****a. DRC Errors****
 route__drc_errors__iter:1 → 8106  
 ...  
 route__drc_errors__iter:7 → 0  
 route__drc_errors = 0 ✅  
 -> Ban đầu có nhiều lỗi (8106), sau đó tool fix dần rồi drc_errors = 0 (Clean routing).   
 -> Kết luận: không có vấn đề về layout  
+
+**b. Wirelength**  
+route__wirelength ≈ 450,484   
+Ý nghĩa:  
+tổng chiều dài dây  
+không quá lớn so với design size   
+-> wire delay không có vấn đề  
 
 
 
