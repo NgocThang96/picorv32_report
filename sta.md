@@ -376,6 +376,54 @@ nand3_4 → and3_1 → clkbuf_1 → FF (_14561_)
 - Kiểm tra bằng cách xem report của ****file "multi_corner_sta.min.rpt"****  
 - Sau khi kiểm tra, Không phát hiện vi phạm hold timing, cho thấy tất cả các đường dữ liệu đều thỏa mãn về độ trễ (delay) tối thiểu.
 
+### PHÂN TÍCH CLOCK  
+### 1. Clock analysis là gì?  
+
+Mục tiêu là kiểm tra: Clock có được phân phối đều đến các flip-flop không?  
+
+Có 3 thứ cần kiểm tra:  
+
+(1) Clock latency  
+Thời gian clock đi từ source đến FF  
+
+(2) Clock skew  
+Chênh lệch thời gian clock đến giữa 2 FF  
+
+(3) Clock uncertainty  
+Sai số clock (jitter + margin)  
+
+### 2. Phân tích report  
+Mở file "multi_corner_sta.skew.rpt" trong thư mục "31-sta-rcx_max"  
+Đây là file STA sau routing + RC extraction (signoff level):  
+
+Clock clk
+
+_13894_/CLK   latency = 2.59 ns  
+_14696_/CLK   latency = 1.89 ns  
+               CRPR = -0.14 ns  
+               Skew = 0.56 ns  
+
+### (A) Clock latency (Thời gian clock đi từ source đến FF):  
+Launch FF: 2.59 ns  
+Capture FF: 1.89 ns  
+=> clock đến FF launch chậm hơn  
+clock đến FF capture nhanh hơn  
+
+### (B) Clock skew (Chênh lệch thời gian clock đến giữa 2 FF): 
+Skew = 0.56 ns  
+
+### Đánh giá:
+|Skew	| Đánh giá|
+|< 0.1 ns	|rất tốt|
+|0.1–0.3 ns|	ổn|
+|> 0.5 ns	| hơi lớn|  
+
+
+
+
+
+
+
 
 
     
