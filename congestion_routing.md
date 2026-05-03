@@ -10,8 +10,31 @@ Logic kết nối phức tạp (fanout lớn)
 Macro/block chặn đường đi  
 Clock tree phân bố không đều  
 
+****3. Congestion được đo như thế nào?****  
+Trong tool (như OpenLane), thường dùng:  
 
+Overflow = Routing demand – Routing capacity  
+- Nếu:  
++ Overflow = 0 → OK  
++ Overflow > 0 → bị congestion
 
+****4. Nếu congestion nặng thì sao?****  
+
+a. Routing FAIL  
+- tool không route được hết dây  
+- hoặc phải route vòng rất xa  
+b. DRC lỗi nhiều    
+- spacing violation  
+- short / overlap  
+c.  Timing xấu đi  
+dây dài hơn → delay tăng → setup fail  
+d. Power tăng  
+wire dài → capacitance lớn → tốn điện  
+e. Signal integrity xấu  
+- coupling noise  
+- crosstalk  
+
+****5. Check****  
 - Ở thư mục ****"reports/routing/"****  
 - Mở file ****"26-drt_metrics.json":****  
 - {
@@ -66,6 +89,23 @@ route__wirelength ≈ 450,484
 tổng chiều dài dây  
 không quá lớn so với design size   
 -> wire delay không có vấn đề  
+
+**c. Congestion**  
+Trong report không có báo cáo về overflow, nhưng nhìn vào:  
+- DRC giảm rất nhanh → 8106 → 0
+  Nếu congestion nặng thì DRC sẽ khó về 0
+  => congestion thấp
+
+**d. Utilization**  
+design__instance__utilization = 0.49522 (~49.5%)  
+=> ở mức rất tốt 
+| Utilization | Đánh giá      |
+| ----------- | ------------- |
+| < 40%       | lãng phí      |
+| 50–70%      | ✅ tốt         |
+| > 80%       | dễ congestion |
+
+
 
 
 
