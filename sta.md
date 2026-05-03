@@ -413,10 +413,11 @@ clock đến FF capture nhanh hơn
 Skew = 0.56 ns  
 
 ### Đánh giá:
-|Skew	| Đánh giá|
-|< 0.1 ns	|rất tốt|
-|0.1–0.3 ns|	ổn|
-|> 0.5 ns	| hơi lớn|  
+|Skew	      | Đánh giá   |  
+| --------  |--------------|
+|< 0.1 ns	|  rất tốt |  
+|0.1–0.3 ns  |	ổn     |  
+|> 0.5 ns	 |  hơi lớn|    
 
 
 
