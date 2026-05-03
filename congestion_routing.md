@@ -102,8 +102,21 @@ design__instance__utilization = 0.49522 (~49.5%)
 | Utilization | Đánh giá      |
 | ----------- | ------------- |
 | < 40%       | lãng phí      |
-| 50–70%      | ✅ tốt         |
-| > 80%       | dễ congestion |
+| ****50–70%****      | ****tốt****        |
+| > 80%       | dễ congestion |  
+
+**e. Vias**  
+route__vias = 80363  
+-> Bình thường  
+
+### KẾT LUẬN  
+- Placement tốt (util ~50%)  
+- Routing clean (DRC = 0)  
+- Không congestion  
+Nhưng timing vẫn FAIL  
+=> nghĩa là vấn đề không phải BACKEND mà là FRONTEND (RTL/logic depth)
+
+
 
 
 
