@@ -446,8 +446,14 @@ Clock source
 
 - timing thực tế hơn (ít pessimistic hơn)
 
-+ Trong report CRPR = -0.14 ns => tool đã giảm 0.14 ns pessimism
-+ 
+### So với report của violated timing:  
+
++ Trong report CRPR = -0.14 ns => tool đã giảm 0.14 ns pessimism  
++ Trong report về STA, CRPR sẽ cộng vào slack:
++ Slack ≈ -4.13 ns , CRPR + 0.14 ns
+=>> kết luận: timing fail quá nặng nên CRPR không thể giúp cải thiện timing
+
+  
 
 
 
