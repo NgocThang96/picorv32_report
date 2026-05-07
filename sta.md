@@ -373,8 +373,11 @@ nand3_4 → and3_1 → clkbuf_1 → FF (_14561_)
 - Vì vậy, nguyên nhân chính làm timing bị violated là do tổ hợp gate quá lớn.
 
 ### B. KIỂM TRA TÍN HIỆU NHANH NHẤT (HOLD TIMING)
-- Kiểm tra bằng cách xem report của ****file "multi_corner_sta.min.rpt"****  
-- Sau khi kiểm tra, Không phát hiện vi phạm hold timing, cho thấy tất cả các đường dữ liệu đều thỏa mãn về độ trễ (delay) tối thiểu.
+- Kiểm tra bằng cách xem report của ****file "multi_corner_sta.min.rpt"****:
+  "report_worst_slack -min (Hold)  
+============================================================================  
+worst slack 0.07"  
+- Sau khi kiểm tra, worst slack 0.07. Không phát hiện vi phạm hold timing, cho thấy tất cả các đường dữ liệu đều thỏa mãn về độ trễ (delay) tối thiểu.  
 
 ### PHÂN TÍCH CLOCK  
 ### 1. Clock analysis là gì?  
@@ -450,8 +453,15 @@ Clock source
 
 + Trong report CRPR = -0.14 ns => tool đã giảm 0.14 ns pessimism  
 + Trong report về STA, CRPR sẽ cộng vào slack:
-+ Slack ≈ -4.13 ns , CRPR + 0.14 ns
++ Slack ≈ -4.13 ns , CRPR + 0.14 ns  
 =>> kết luận: timing fail quá nặng nên CRPR không thể giúp cải thiện timing
+
+ROOT CAUSE ANALYSIS
+==============
+
+
+
+
 
   
 
