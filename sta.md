@@ -478,6 +478,39 @@ mỗi gate thêm:
 -transition degradation  
 -RC delay  
 
+👉 tổng cộng:
+
+data arrival time ≈ 16 ns
+
+trong khi:
+
+clock period = 10 ns
+
+→ fail setup nặng.  
+
+### C. Vì sao không phải congestion?  
+Nếu congestion là nguyên nhân chính thì thường sẽ thấy:  
+
+-wire delay cực lớn   
+-utilization cao (~80–90%)  
+-routing overflow  
+-DRC nhiều  
+
+Nhưng trong design này:  
+-utilization chỉ ~50%  
+-DRC = 0  
+→ routing ổn. 
+
+### D. Vì sao không phải clock?   
+- Nếu clock là nguyên nhân chính:  
+
+skew phải rất lớn (~1ns+)  
+
+- Nhưng design này:    
+
+skew ≈ 0.56 ns  
+
+→ chỉ ảnh hưởng nhỏ.  
 
 
 
