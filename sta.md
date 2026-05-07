@@ -456,9 +456,33 @@ Clock source
 + Slack ≈ -4.13 ns , CRPR + 0.14 ns  
 =>> kết luận: timing fail quá nặng nên CRPR không thể giúp cải thiện timing
 
-ROOT CAUSE ANALYSIS
-==============
+ROOT CAUSE ANALYSIS  
+==============  
+### A. Dựa trên report:  
+1. Setup timing fail:  
+   Worst slack ≈ -4.13 ns  
+3. Hold timing: OK  
+4. Congestion OK :  
+   route__drc_errors = 0 , utilization ≈ 49.5%  
+5. Clock skew có nhưng không quá lớn:  
+   skew ≈ 0.56 ns
 
+### B. Vậy root cause là gì?  
+Nhìn vào critical pat:  
+FF → and4 → and4 → and4 → and4 → ... → FF
+-> có rất nhiều and4 nối liên tiếp   
+👉 nghĩa là:  
+-logic depth quá sâu    
+mỗi gate thêm:  
+-gate delay  
+-transition degradation  
+-RC delay  
+
+
+
+
+   
+   
 
 
 
