@@ -419,6 +419,40 @@ Skew = 0.56 ns
 |0.1–0.3 ns  |	ổn     |  
 |> 0.5 ns	 |  hơi lớn|    
 
+### (C) CRPR (Clock Reconvergence Pessimism Removal)  
+
+-  Trong STA, clock đi qua nhiều buffer giống nhau, ví dụ:  
+Clock source  
+   ↓  
+  BUF1  
+   ↓  
+  BUF2  
+   ↓  
+  ...  
+   ↓  
+  FF1 (launch)  
+   ↓  
+  ...  
+   ↓  
+  FF2 (capture)  
+
+- clock đi chung đến một đoạn nào đó, thì clock path của launch và capture bị tách ra  
+
+- Tuy nhiên, STA tool thường sẽ tính riêng thêm delay của cả launch và capture => timing bị xấu hơn thực tế  
+
+- CRPR sẽ trừ đi phần delay bị tính trùng ở common path  
+
+👉 giúp:  
+
+- timing thực tế hơn (ít pessimistic hơn)
+
++ Trong report CRPR = -0.14 ns => tool đã giảm 0.14 ns pessimism
++ 
+
+
+
+  
+  
 
 
 
