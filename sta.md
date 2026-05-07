@@ -412,12 +412,16 @@ clock đến FF capture nhanh hơn
 ### (B) Clock skew (Chênh lệch thời gian clock đến giữa 2 FF): 
 Skew = 0.56 ns  
 
-### Đánh giá:
+### Đánh giá:  
 |Skew	      | Đánh giá   |  
-| --------  |--------------|
+| --------  |--------------|  
 |< 0.1 ns	|  rất tốt |  
 |0.1–0.3 ns  |	ổn     |  
 |> 0.5 ns	 |  hơi lớn|    
+
+
+
+
 
 
 
