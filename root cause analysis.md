@@ -53,3 +53,9 @@ skew phải rất lớn (~1ns+)
 skew ≈ 0.56 ns  
 
 → chỉ ảnh hưởng nhỏ.  
+
+### KẾT LUẬN:  
+Nguyên nhân chính gây ra violate cho setup timing là do logic depth tổ hợp quá mức trên các critical paths, dẫn đến tổng độ trễ tích lũy (delay) của các cổng logic rất lớn. Độ lệch xung nhịp (clock skew) và tắc nghẽn định tuyến (routing congestion) đóng góp rất ít so với độ trễ trên đường truyền dữ liệu."  
+=> Phương án đề xuất: nếu gặp lỗi setup thay vì tập trung vào việc chỉnh sửa xung nhịp hay cách đi dây, nên ưu tiên việc tối ưu hóa lại code RTL để giảm số lượng cổng logic giữa các thanh ghi (registers).  
+
+
