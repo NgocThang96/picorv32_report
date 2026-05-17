@@ -19,7 +19,7 @@ wirelength trung bình thấp hơn
 congestion thường ít hơn rectangle quá dài  
 
 ### 2. Cell Utilization:  
-"design__instance__utilization": 0.49522  
+"final_util": 0.49522  
 => utilization ≈ 49.5%  
 ### Nhận xét:  
 -utilization thấp → routing dễ hơn  
