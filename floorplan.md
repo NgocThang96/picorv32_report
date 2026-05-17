@@ -3,7 +3,7 @@
 
 FLOORPLAN ANALYSIS:  
 =================
-Trong report picorv32.def và metrics.json:  
+Trong report metrics.csv  trong thư mục reports:  
 ### 1. Core/Die Area:  
 DIEAREA ( 0 0 ) ( 502460 513180 )  
 Width ≈ 502.46 µm  
