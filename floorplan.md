@@ -7,9 +7,22 @@ Trích file metrics.csv  trong thư mục rún/reports:
 ### 1. Die Area (diện tích chip):   
 "DieArea" ≈ 257852 µm²  
 => diện tích này gần vuông  
+Đây là tổng diện tích toàn chip, bao gồm:  
+-core region  
+-IO region  
+-power ring  
+-spacing/margin  
 ### Core Area (diện tích vùng core):  
-"coreArea": 240531   
+"coreArea": 240531µm²   
+Đây là vùng chứa:  
+-standard cells  
+-logic gates  
+-flip-flops  
 
+Core area chiếm phần lớn die area:  
+257852/240531 ≈93.3%  
+=> phần IO/margin không quá lớn  
+chip sử dụng diện tích khá hiệu quả  
 ### Ưu điểm  
 routing cân bằng  
 clock tree dễ distribute hơn  
