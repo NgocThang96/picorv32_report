@@ -3,14 +3,12 @@
 
 FLOORPLAN ANALYSIS:  
 =================
-Trong report metrics.csv  trong thư mục reports:  
-### 1. Core/Die Area:  
-DIEAREA ( 0 0 ) ( 502460 513180 )  
-Width ≈ 502.46 µm  
-Height ≈ 513.18 µm  
-Die area ≈ 257852 µm²  
+Trích file metrics.csv  trong thư mục rún/reports:  
+### 1. Die Area (diện tích chip):   
+"DieArea" ≈ 257852 µm²  
 => diện tích này gần vuông  
-"design__core__area": 240531   
+### Core Area (diện tích vùng core):  
+"coreArea": 240531   
 
 ### Ưu điểm  
 routing cân bằng  
