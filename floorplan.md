@@ -23,11 +23,10 @@ Core area chiếm phần lớn die area:
 257852/240531 ≈93.3%  
 => phần IO/margin không quá lớn  
 chip sử dụng diện tích khá hiệu quả  
-### Ưu điểm  
-routing cân bằng  
-clock tree dễ distribute hơn  
-wirelength trung bình thấp hơn  
-congestion thường ít hơn rectangle quá dài  
+### Kết luận:  
+Thiết kế có floorplan cân đối với die area 257852 µm² và core area 240531 µm².  
+Bố cục gần vuông giúp routing và clock tree hiệu quả hơn.  
+Core chiếm khoảng 93,3% diện tích die, cho thấy mức sử dụng diện tích tốt nhưng vẫn đủ không gian cho IO và routing.  
 
 ### 2. Cell Utilization:  
 "final_util": 0.49522  
