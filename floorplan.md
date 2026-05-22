@@ -39,6 +39,7 @@ Core chiếm khoảng 93,3% diện tích die, cho thấy mức sử dụng diệ
 => 49% là khá an toàn.  
 
 ### 3. Aspect Ratio:  
+tỉ lệ giữa chiều rộng và chiều cao của chip/core  
 DIEAREA ( 0 0 ) ( 502460 513180 ) ;  
 aspect ratio: Height/Weight = 513180/502460 = 1.02  
 
@@ -73,5 +74,23 @@ Với Aspect ratio như trên: 1.02
 → rất gần vuông.  
 Đây là floorplan khá tốt.  
 
+### 4. Cell Count:  
+Cell count dùng để phân tích:  
 
+-độ phức tạp của thiết kế  
+-số lượng logic cells  
+-overhead sau physical implementation  
+
+### a. Số lượng logical cells sau synthesis  
+
+Sau giai đoạn synthesis, thiết kế có:  
+
+### synth_cell_count = 8680  
+
+Đây là số lượng logical standard cells được tạo ra từ RTL synthesis, bao gồm:  
+
+-logic gates,
+-flip-flops,
+-multiplexers,
+-các khối combinational/arithmetic logic.
 
