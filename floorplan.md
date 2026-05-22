@@ -38,6 +38,40 @@ Core chiếm khoảng 93,3% diện tích die, cho thấy mức sử dụng diệ
 
 => 49% là khá an toàn.  
 
+### 3. Aspect Ratio:  
+DIEAREA ( 0 0 ) ( 502460 513180 ) ;  
+aspect ratio: Height/Weight = 513180/502460 = 1.02  
+
+### Ý nghĩa của Aspect Ratio:  
+≈ 1	gần vuông ✅
+>> 1: kích thước chip	dài theo chiều dọc  
+<< 1: kích thước chip	dài theo chiều ngang
+
+### Vì sao gần vuông là tốt?  
+### 1. Routing cân bằng hơn:  
+Nếu chip quá dài:  
+
+-một số net phải đi rất xa  
+-wirelength tăng   
+-delay tăng  
+
+Chip gần vuông:  
+-khoảng cách trung bình ngắn hơn  
+-routing đều hơn  
+### 2. Clock Tree tốt hơn  
+CTS thích layout cân đối vì:  
+
+-skew dễ control  
+-insertion delay đồng đều hơn  
+
+### 3. Giảm congestion hotspot  
+
+-tập trung routing ở một vùng  
+-tạo congestion cục bộ  
+
+Với Aspect ratio như trên: 1.02
+→ rất gần vuông.  
+Đây là floorplan khá tốt.  
 
 
 
