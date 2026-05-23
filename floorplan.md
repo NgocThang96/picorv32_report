@@ -124,3 +124,35 @@ tương đương tăng thêm khoảng:
 -Clock Tree Synthesis (CTS),  
 -timing optimization,  
 -routing optimization.  
+
+### 5. White Space:  
+### a. White Space là gì?  
+
+White space là phần diện tích còn trống trong vùng core sau khi placement standard cells.  
+
+Nó được tính từ utilization:  
+  WhiteSpace=100%−Utilization = 100%−49.5% ≈ 50.5%  
+
+### b. Ý nghĩa của White Space  
+
+Khoảng 50% diện tích core còn trống cho:  
+
+-routing resources,  
+-clock tree buffers,  
+-timing optimization,  
+-filler/tap insertion,  
+-future ECO optimization.  
+
+### c. Đánh giá White Space của thiết kế  
+
+Mức white space khoảng 50% được xem là khá an toàn đối với standard-cell digital design.  
+
+Điều này mang lại nhiều lợi ích:  
+
+-giảm nguy cơ routing congestion,  
+-giúp CTS dễ optimize clock tree hơn,  
+-giảm khả năng xuất hiện hotspot routing,  
+-tạo thêm không gian cho timing optimization buffers.  
+
+
+
