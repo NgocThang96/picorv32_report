@@ -83,14 +83,44 @@ Cell count dùng để phân tích:
 
 ### a. Số lượng logical cells sau synthesis  
 
-Sau giai đoạn synthesis, thiết kế có:  
+Sau giai đoạn synthesis, trích trong file metrics.csv thiết kế có:  
 
 ### synth_cell_count = 8680  
 
 Đây là số lượng logical standard cells được tạo ra từ RTL synthesis, bao gồm:  
 
--logic gates,
--flip-flops,
--multiplexers,
--các khối combinational/arithmetic logic.
+-logic gates,  
+-flip-flops,  
+-multiplexers,  
+-các khối combinational/arithmetic logic.  
 
+### b. Physical Component Count  
+
+Trong picorv32.def  
+
+### COMPONENTS 12498 ;  
+
+Đây là tổng số physical instances sau physical implementation.  
+
+Ngoài logical cells ban đầu, backend flow đã thêm:  
+
+-clock tree buffers,  
+-optimization buffers,  
+-inserted inverters,  
+-physical support cells.  
+
+### c. Physical Design Overhead  
+
+Số lượng component tăng từ:  
+
+- 8680→12498  
+
+tương đương tăng thêm khoảng:  
+
+3818 cells  
+
+Điều này phản ánh physical overhead do:  
+
+-Clock Tree Synthesis (CTS),  
+-timing optimization,  
+-routing optimization.  
