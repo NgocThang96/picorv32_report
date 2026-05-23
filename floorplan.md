@@ -154,5 +154,72 @@ Mức white space khoảng 50% được xem là khá an toàn đối với stand
 -giảm khả năng xuất hiện hotspot routing,  
 -tạo thêm không gian cho timing optimization buffers.  
 
+### 6. ẢNH HƯỞNG ĐẾN ROUTING/TIMING:  
+### a. Ảnh hưởng đến Routing  
+
+Floorplan của thiết kế có:  
+
+-utilization trung bình (~49.5%)  
+-aspect ratio gần vuông (~1.02)  
+-white space khoảng 50.5%  
+
+Những yếu tố này giúp:  
+
+-phân bố cell đồng đều hơn  
+-tạo đủ không gian cho routing  
+-giảm nguy cơ congestion cục bộ  
+-hỗ trợ placement và routing hiệu quả hơn  
+
+### b. Ảnh hưởng đến Clock Distribution
+
+Shape gần vuông và utilization vừa phải hỗ trợ tốt cho Clock Tree Synthesis (CTS):  
+
+clock tree phân bố cân bằng hơn  
+clock insertion dễ optimize hơn  
+giảm nguy cơ skew tăng mạnh do layout mất cân đối  
+
+Ngoài ra, white space đủ lớn cho phép tool chèn:  
+
+-clock buffers  
+-optimization buffers  
+-CTS cells  
+
+### c. Ảnh hưởng đến Timing  
+
+Mặc dù floorplan tương đối tốt, STA analysis vẫn cho thấy:  
+
+-setup timing violations  
+-negative setup slack  
+-critical paths có combinational depth lớn  
+
+Critical path analysis trước đó cho thấy:  
+
+-nhiều tầng AND4 gates nối tiếp  
+-data arrival time vượt clock period 10 ns  
+
+### => Điều này cho thấy: timing bottleneck chủ yếu xuất phát từ logic depth và combinational path length.  
+
+Thay vì:  
+
+-floorplan congestion  
+-thiếu routing resource  
+-layout shape không hợp lý  
+
+### KẾT LUẬN:  
+
+Floorplan hiện tại được đánh giá là khá cân bằng nhờ:  
+
+core utilization hợp lý  
+aspect ratio gần vuông
+lượng white space đủ lớn
+
+Những đặc điểm này hỗ trợ tốt cho:
+
+placement quality
+routing feasibility
+clock distribution
+
+Tuy nhiên, timing violation vẫn tồn tại chủ yếu do kiến trúc logic và critical path depth, thay vì do hạn chế của floorplan
+
 
 
