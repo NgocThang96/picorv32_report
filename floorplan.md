@@ -4,7 +4,7 @@
 FLOORPLAN ANALYSIS:  
 =================
 Trích file metrics.csv  trong thư mục rún/reports:  
-### 1. Die Area (diện tích chip):   
+### 1. DIE AREA (diện tích chip):   
 "DieArea" ≈ 257852 µm²  
 => diện tích này gần vuông  
 Đây là tổng diện tích toàn chip, bao gồm:  
@@ -12,7 +12,7 @@ Trích file metrics.csv  trong thư mục rún/reports:
 -IO region  
 -power ring  
 -spacing/margin  
-### Core Area (diện tích vùng core):  
+### CORE AREA (diện tích vùng core):  
 "coreArea": 240531µm²   
 Đây là vùng chứa:  
 -standard cells  
@@ -28,7 +28,7 @@ Thiết kế có floorplan cân đối với die area 257852 µm² và core area
 Bố cục gần vuông giúp routing và clock tree hiệu quả hơn.  
 Core chiếm khoảng 93,3% diện tích die, cho thấy mức sử dụng diện tích tốt nhưng vẫn đủ không gian cho IO và routing.  
 
-### 2. Cell Utilization:  
+### 2. CELL UTILIZATION:  
 "final_util": 0.49522  
 => utilization ≈ 49.5%  
 ### Nhận xét:  
@@ -38,7 +38,7 @@ Core chiếm khoảng 93,3% diện tích die, cho thấy mức sử dụng diệ
 
 => 49% là khá an toàn.  
 
-### 3. Aspect Ratio:  
+### 3. ASPECT RATIO:  
 tỉ lệ giữa chiều rộng và chiều cao của chip/core  
 DIEAREA ( 0 0 ) ( 502460 513180 ) ;  
 aspect ratio: Height/Weight = 513180/502460 = 1.02  
@@ -49,7 +49,7 @@ aspect ratio: Height/Weight = 513180/502460 = 1.02
 << 1: kích thước chip	dài theo chiều ngang
 
 ### Vì sao gần vuông là tốt?  
-### 1. Routing cân bằng hơn:  
+###  Routing cân bằng hơn:  
 Nếu chip quá dài:  
 
 -một số net phải đi rất xa  
@@ -59,13 +59,13 @@ Nếu chip quá dài:
 Chip gần vuông:  
 -khoảng cách trung bình ngắn hơn  
 -routing đều hơn  
-### 2. Clock Tree tốt hơn  
+###  Clock Tree tốt hơn  
 CTS thích layout cân đối vì:  
 
 -skew dễ control  
 -insertion delay đồng đều hơn  
 
-### 3. Giảm congestion hotspot  
+###  Giảm congestion hotspot  
 
 -tập trung routing ở một vùng  
 -tạo congestion cục bộ  
@@ -74,7 +74,7 @@ Với Aspect ratio như trên: 1.02
 → rất gần vuông.  
 Đây là floorplan khá tốt.  
 
-### 4. Cell Count:  
+### 4. CELL COUNT:  
 Cell count dùng để phân tích:  
 
 -độ phức tạp của thiết kế  
@@ -125,7 +125,7 @@ tương đương tăng thêm khoảng:
 -timing optimization,  
 -routing optimization.  
 
-### 5. White Space:  
+### 5. WHITE SPACE:  
 ### a. White Space là gì?  
 
 White space là phần diện tích còn trống trong vùng core sau khi placement standard cells.  
